@@ -7,10 +7,9 @@ import re
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 MODELS = [
-    "model=gemini-3.6-flash",
-    "gemini-3.6-flash-lite",
-    "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
+    
+    "gemini-3.5-flash-lite",
+    "gemini-3.6-flash"
 ]
 
 
@@ -35,7 +34,7 @@ def generate_ai_response(prompt):
             print(f"Failed: {model_name}")
             print(last_error)
 
-            # Next model try कर
+        
             time.sleep(2)
 
     return (
